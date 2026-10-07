@@ -42,11 +42,19 @@ Portal web / Mapeo        → MySQL destino · panel de control
 
 ## Instalación
 
-1. Descarga `SyncAgent-X.Y.Z.zip` de la última
-   [release](../../releases).
-2. Descomprime y ejecuta `agent.exe` una vez para registrar credenciales.
-3. Ejecuta `instalar_servicio.bat` **como administrador** — queda como
-   servicio con watchdog.
+**Recomendado — instalador** `IT-Community-Sync-Agent-Setup-X.Y.Z.exe`:
+
+1. Descárgalo de la última [release](../../releases).
+2. Ejecútalo **como administrador** — instala el agente, crea el servicio
+   (Scheduled Task SYSTEM) y el watchdog automáticamente.
+3. Al terminar, abre `agent.exe` una vez para registrar credenciales.
+
+**Alternativa — zip** `SyncAgent-X.Y.Z.zip` (usado también para las
+actualizaciones remotas desde el panel Mapeo):
+
+1. Descomprime en `C:\Sincronizador\agent`.
+2. Ejecuta `agent.exe` una vez para registrar credenciales.
+3. Ejecuta `instalar_servicio.bat` como administrador.
 
 ## Licencia
 
