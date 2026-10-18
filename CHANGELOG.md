@@ -4,7 +4,14 @@ All notable releases published in this repository.
 
 ## v1.1.17 — 2026-10-16
 
-Release v1.1.17 (CI)
+## Release v1.1.17
+
+Official signed binaries. Docs: https://mavksoft.github.io/it-community-sync-agent-releases/
+
+### Assets
+- `IT-Community-Sync-Agent-Setup-1.1.17.exe`
+- `SyncAgent-1.1.17.sha256`
+- `SyncAgent-1.1.17.zip`
 
 **Assets:** `IT-Community-Sync-Agent-Setup-1.1.17.exe` · `SyncAgent-1.1.17.sha256` · `SyncAgent-1.1.17.zip`
 

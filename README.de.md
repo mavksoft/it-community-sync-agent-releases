@@ -23,9 +23,9 @@
 
 | | |
 |---|---|
-| 📥 **Installer (empfohlen)** | [IT-Community-Sync-Agent-Setup.exe](https://github.com/mavksoft/it-community-sync-agent-releases/releases/latest) — installiert Agent, Dienst und Watchdog |
-| 🗜️ **Portables Zip** | `SyncAgent-<Version>.zip` in jedem Release — auch für Remote-Updates verwendet |
-| 🌍 **Produktseite** | [it-community.online](https://it-community.online) · Panel: mapeo.it-systems.es |
+| <img src='https://raw.githubusercontent.com/mavksoft/it-community-sync-agent-releases/main/icons/windows.svg' width='15' style='vertical-align:-2px' alt='windows'> **Installer (empfohlen)** | [IT-Community-Sync-Agent-Setup.exe](https://github.com/mavksoft/it-community-sync-agent-releases/releases/latest) — installiert Agent, Dienst und Watchdog |
+| <img src='https://raw.githubusercontent.com/mavksoft/it-community-sync-agent-releases/main/icons/windows.svg' width='15' style='vertical-align:-2px' alt='windows'> **Portables Zip** | `SyncAgent-<Version>.zip` in jedem Release — auch für Remote-Updates verwendet |
+| <img src='https://it-community.online/assets/logo.png' width='15' style='vertical-align:-2px'> **Produktseite** | [it-community.online](https://it-community.online) · Panel: mapeo.it-systems.es |
 
 ## Was ist das
 
