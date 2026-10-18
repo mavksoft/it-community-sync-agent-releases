@@ -13,6 +13,8 @@
   <img src="https://img.shields.io/badge/license-commercial-orange" alt="commercial license">
 </p>
 
+<p align="center"><a href="https://mavksoft.github.io/it-community-sync-agent-releases/"><img src="https://img.shields.io/badge/docs-mavksoft.github.io%2Fit-community-sync-agent-releases-blue" alt="docs"></a></p>
+
 <p align="center">🌍 <a href="README.es.md">🇪🇸 Español</a> · <a href="README.md">🇬🇧 English</a> · <a href="README.de.md">🇩🇪 Deutsch</a> · <a href="README.fr.md">🇫🇷 Français</a> · <strong>🇮🇹 Italiano</strong> · <a href="README.pt.md">🇵🇹 Português</a></p>
 
 > **Questo repository pubblica solo release binarie ufficiali** — il codice sorgente è privato. Download firmati, checksum e feed di aggiornamento automatico.
