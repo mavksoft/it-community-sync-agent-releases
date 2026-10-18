@@ -42,6 +42,8 @@ Relay sync-point.es       ← authentifiziert (X-Relay-Key)
 Webportal / Mapeo         → MySQL-Ziel · Kontrollpanel
 ```
 
+<p align="center"><img src="./screenshots/website.png" width="640" alt="screenshot"></p>
+
 ## Funktionen
 
 - **Null eingehende Ports** — der Agent öffnet nur ausgehende Verbindungen; die Firewall bleibt unberührt.

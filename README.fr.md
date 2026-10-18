@@ -42,6 +42,8 @@ Relais sync-point.es      ← authentifié (X-Relay-Key)
 Portail web / Mapeo       → destination MySQL · panneau de contrôle
 ```
 
+<p align="center"><img src="./screenshots/website.png" width="640" alt="screenshot"></p>
+
 ## Fonctionnalités
 
 - **Zéro port entrant** — l'agent n'ouvre que des connexions sortantes ; le pare-feu du client n'est pas touché.

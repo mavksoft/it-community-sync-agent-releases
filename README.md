@@ -42,6 +42,8 @@ Relay sync-point.es       ← authenticated (X-Relay-Key)
 Web portal / Mapeo        → MySQL destination · control panel
 ```
 
+<p align="center"><img src="./screenshots/website.png" width="640" alt="screenshot"></p>
+
 ## Features
 
 - **Zero inbound ports** — the agent only opens outbound connections; the client's firewall is untouched.

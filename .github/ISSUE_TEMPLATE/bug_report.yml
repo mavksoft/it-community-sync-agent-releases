@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a problem with IT-Community Sync Agent
+labels: ["bug"]
+body:
+  - type: input
+    attributes:
+      label: App version
+      description: Version shown in About / release tag you installed
+      placeholder: e.g. 1.2.3
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Operating system
+      placeholder: e.g. macOS 15.1 / Windows 11 23H2
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened
+      description: Steps to reproduce and what you expected
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Logs / screenshots
+      description: Attach anything that helps reproduce the issue

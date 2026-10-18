@@ -1,0 +1,32 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IT-Community Sync Agent — docs</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<nav><strong>IT-Community Sync Agent</strong><span class="langs"><a href="?lang=es">🇪🇸</a> · <a href="?lang=en">🇬🇧</a> · <a href="?lang=de">🇩🇪</a> · <strong>🇫🇷</strong> · <a href="?lang=it">🇮🇹</a> · <a href="?lang=pt">🇵🇹</a></span></nav>
+<header><h1>IT-Community Sync Agent</h1><p class="tag">Canal officiel de téléchargement de l'agent de synchronisation IT-Community.<br>Synchronise SQL Server local (ERP) vers les portails MySQL cloud — sans ouvrir un seul port entrant.</p>
+<p><a class="btn" href="https://github.com/mavksoft/it-community-sync-agent-releases/releases/latest">Dernière version</a>
+<a class="btn ghost" href="https://it-community.online">Website</a></p></header>
+<main>
+<section><h2>Téléchargement</h2><table><tr><td>📥 <strong>Installateur (recommandé)</strong></td><td><a href="https://github.com/mavksoft/it-community-sync-agent-releases/releases/latest">IT-Community-Sync-Agent-Setup.exe</a> — installe agent, service et watchdog</td></tr><tr><td>🗜️ <strong>Zip portable</strong></td><td><code>SyncAgent-&lt;version&gt;.zip</code> dans chaque release — aussi utilisé par les mises à jour à distance</td></tr><tr><td>🌍 <strong>Site produit</strong></td><td><a href="https://it-community.online">it-community.online</a> · Panneau : mapeo.it-systems.es</td></tr></table></section>
+<section><h2>Qu'est-ce que c'est</h2><p>Un agent <strong>Windows Server</strong> qui synchronise les bases <strong>SQL Server</strong> locales (ERP IESA / Gesfincas et similaires) vers des portails <strong>MySQL</strong> dans le cloud — en toute sécurité et <strong>sans ouvrir un seul port entrant</strong> sur le serveur du client.</p>
+<pre>SQL Server local
+      │  (lecture seule · écriture optionnelle contrôlée)
+      ▼
+IT-Community Sync Agent   ← service Windows headless (SYSTEM)
+      │  WebSocket sécurisé (WSS · TLS vérifié · jeton)
+      ▼
+Relais sync-point.es      ← authentifié (X-Relay-Key)
+      │
+      ▼
+Portail web / Mapeo       → destination MySQL · panneau de contrôle</pre></section>
+<section><h2>Fonctionnalités</h2><ul><li><strong>Zéro port entrant</strong> — l&#x27;agent n&#x27;ouvre que des connexions sortantes ; le pare-feu du client n&#x27;est pas touché.</li><li><strong>Incrémental réel</strong> — Change Tracking / rowversion, checkpoints delta par table ; rien d&#x27;inchangé n&#x27;est recopié.</li><li><strong>Vraiment headless</strong> — tourne en Scheduled Task sous SYSTEM, sans session utilisateur ni RDP ouvert ; watchdog auto-relanceur inclus.</li><li><strong>Géré depuis le cloud</strong> — panneau sur mapeo.it-systems.es avec état en direct, configuration à distance, visionneuse de logs et écriture on/off.</li><li><strong>Auto-mise à jour signée</strong> — téléchargement vérifié SHA-256 avec rollback automatique si la nouvelle version ne démarre pas.</li><li><strong>Supervision</strong> — badges online/offline et alertes email avant les synchronisations programmées.</li></ul></section>
+<section><h2>Mode d'emploi</h2><ol><li>Téléchargez <code>IT-Community-Sync-Agent-Setup-&lt;version&gt;.exe</code> depuis la dernière release.</li><li>Exécutez-le <strong>en administrateur</strong> — il installe l&#x27;agent, crée la Scheduled Task (SYSTEM) et le watchdog automatiquement.</li><li>Puis ouvrez <code>agent.exe</code> une fois pour enregistrer les identifiants.</li><li>Alternative manuelle : décompressez le zip dans <code>C:\Sincronizador\agent</code>, lancez <code>agent.exe</code> pour les identifiants, puis <code>instalar_servicio.bat</code> en administrateur.</li><li>Depuis le panneau Mapeo, supervisez l&#x27;état, modifiez la configuration et activez/désactivez l&#x27;écriture distante.</li></ol></section>
+<section><h2>Configuration requise</h2><p>Windows Server (ou Windows 10/11) · Accès à l&#x27;instance SQL Server source · Connectivité sortante HTTPS/WSS uniquement — aucun port entrant.</p></section>
+<section><h2>Contenu de ce dépôt</h2><ul><li><code>IT-Community-Sync-Agent-Setup-&lt;version&gt;.exe</code> — installateur complet (agent + service + watchdog)</li><li><code>SyncAgent-&lt;version&gt;.zip</code> — paquet portable, aussi utilisé pour les mises à jour à distance</li><li><code>SyncAgent-&lt;version&gt;.sha256</code> — somme de contrôle pour vérification</li></ul></section>
+<section><h2>Questions fréquentes</h2><details><summary>Faut-il ouvrir des ports ou du NAT sur le pare-feu du client ?</summary><p>Non. L&#x27;agent n&#x27;établit que des connexions sortantes WSS/TLS vers le relais — il fonctionne derrière tout pare-feu d&#x27;entreprise standard.</p></details><details><summary>Que se passe-t-il si le serveur redémarre ou l&#x27;agent plante ?</summary><p>La Scheduled Task le démarre au boot et le watchdog le relance en cas de crash ; le panneau marque l&#x27;agent offline s&#x27;il ne répond plus.</p></details><details><summary>Peut-il écrire en retour dans l&#x27;ERP ?</summary><p>L&#x27;écriture est optionnelle et contrôlée — activable depuis le panneau Mapeo.</p></details></section>
+<section><h2>Assistance</h2><ul><li>Produit : <a href="https://it-community.online">it-community.online</a></li><li>Panneau de gestion : mapeo.it-systems.es</li></ul></section>
+<footer>IT-Community Sync Agent · © MavkSoft / IT-Systems · <a href="https://github.com/mavksoft/it-community-sync-agent-releases">GitHub</a></footer>
+<script>
+const q=new URLSearchParams(location.search),l=q.get('lang');
+if(!l&&!document.documentElement.lang===undefined){}
+</script></main></body></html>

@@ -42,6 +42,8 @@ Relay sync-point.es       ← autenticado (X-Relay-Key)
 Portal web / Mapeo        → destino MySQL · painel de controlo
 ```
 
+<p align="center"><img src="./screenshots/website.png" width="640" alt="screenshot"></p>
+
 ## Funcionalidades
 
 - **Zero portas de entrada** — o agente só abre ligações de saída; a firewall do cliente não é tocada.

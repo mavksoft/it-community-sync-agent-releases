@@ -1,0 +1,10 @@
+name: Feature request
+description: Suggest an idea for IT-Community Sync Agent
+labels: ["enhancement"]
+body:
+  - type: textarea
+    attributes:
+      label: What would you like?
+      description: Describe the feature and the problem it solves
+    validations:
+      required: true
